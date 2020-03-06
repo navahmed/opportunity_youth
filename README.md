@@ -1,29 +1,10 @@
-# South King County Opportunity Youth
+# South King County Opportunity Youth Analysis
 
-This project offers an updated estimate of the number of Opportunity Youth in South King County using the 2017 5-year American Community Survey [(ACS)](https://www.census.gov/programs-surveys/acs/about.html) Public Use Microdata Survey [(PUMS)](https://www.census.gov/programs-surveys/acs/technical-documentation/pums.html).
+In order to identify the opportunity youth in South King County Washington, we initially identified the cities in South King County and worked out the PUMA IDs based on the city names.
 
-## Setup Instructions
+Once we had this, we ran another SQL query using those PUMA IDs so that we can extract the demographic data for the cities in the region.
 
-To download the necessary data, please run the following command:
+Using this, we ran our analysis.
 
-```bash
-# installs necessary requirements and downloads necessary data
-# note: this may take anywhere from 10-20 minutes
-sh setup.sh
-```
+Please refer to Index.ipynb for more information.
 
-### `oy-env` conda environment
-
-This project relies on you using the [`environment.yml`](environment.yml) file to recreate the `oy-env` conda environment. To do so, please run the following commands:
-
-```bash
-# create the oy-env conda environment
-# note: this make take anywhere from 10-20 minutes
-conda env create -f environment.yml
-
-# activate the oy-env conda environment
-conda activate oy-env
-
-# make oy-env available to you as a kernel in jupyter
-python -m ipykernel install --user --name oy-env --display-name "oy-env"
-```
